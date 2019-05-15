@@ -1,0 +1,553 @@
+/* Globales*/
+
+@primario: #4d79ff;
+@secundario: #002080;
+@desktop: ~" (min-width: 768px) ";
+@tablet: ~" (min-width: 480px) ";
+@letra: ~"'Lato', sans-serif";
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-attachment: fixed;
+  font-family: @letra;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: @letra;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid {
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+}
+
+.columnas-3 {
+  flex: 0 0 calc(25% - 1rem);
+}
+
+
+.columnas-4 {
+  flex: 0 0 calc(33.3% - 1rem);
+}
+
+.columnas-6 {
+  flex: 0 0 calc(50% - 1rem);
+}
+
+.grid-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid-fuera {
+
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+
+/** Botones **/
+.boton {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  display: block;
+  flex: 0 0 100%;
+
+  @media @desktop {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: @primario;
+    transition: .7s all ease-in-out;
+  }
+}
+
+.enlace-primario {
+  color: @primario;
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+
+.boton-primario {
+  background-color: @primario;
+
+  &hover {
+
+    cursor: pointer;
+    background-color: @secundario;
+    transition: .7s all ease-in-out;
+  }
+}
+
+.boton-secundario {
+  background-color: @secundario;
+
+  &hover {
+
+    cursor: pointer;
+    background-color: @primario;
+    transition: .7s all ease-in-out;
+  }
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 95%;
+}
+
+/** Utilidades **/
+.centrar-texto {
+  text-align: center;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+
+/* Header */
+header {
+  .hero {
+    background-image: url(../img/encabezado.png);
+    height: 85vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .contenido-header {
+      padding-top: 4rem;
+
+      .redes-sociales {
+        text-align: center;
+        padding-top: 2rem;
+
+        @media @desktop {
+          padding-top: 1rem;
+        }
+
+        a {
+          color: @secundario;
+          font-size: 3rem;
+          margin-right: 2rem;
+
+          i {
+            color: #fff;
+            font-size: 4rem;
+            margin-right: .6rem;
+          }
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .informacion-sitio {
+        text-align: center;
+        color: #fff;
+        font-size: 2.8rem;
+
+        @media @desktop {
+          width: 70%;
+          margin: 0 auto;
+        }
+
+        p {
+          margin: 40px 0 0 0;
+          display: inline;
+          text-transform: uppercase;
+        }
+
+        .slogan {
+          text-transform: none !important;
+
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .nombre-sitio {
+          font-size: 4rem;
+          margin: 6rem;
+
+          @media @desktop {
+            font-size: 8rem;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**barra*/
+.barra-header {
+  background-color: #a4b9c4;
+
+  .barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    .icono-header img {
+      height: 8rem;
+      width: 40rem;
+    }
+
+    @media @desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .navegacion {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media @desktop {
+        flex-direction: row;
+      }
+
+      a {
+        font-size: 2.5rem;
+        color: @secundario;
+        margin-top: 2rem;
+
+        &:hover {
+          color: @primario;
+        }
+
+        @media @desktop {
+          margin-right: 3rem;
+          margin-top: 0;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.seccion {
+  background-color: white;
+
+  /** Iconos Nosotros **/
+
+  .iconos-nosotros {
+    display: flex;
+    flex-direction: column;
+
+    @media @desktop {
+      justify-content: space-between;
+      flex-direction: row;
+
+    }
+  }
+
+  .icono {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+
+    img {
+      width: 4rem;
+    }
+
+    @media @desktop {
+      flex-basis: calc(25% - 1rem);
+    }
+
+    h3 {
+      color: @primario;
+    }
+  }
+
+}
+
+/** Contacto Home **/
+.imagen-contacto {
+  background-image: url(../img/ordenador-movil.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+
+  .contenido-contacto {
+    flex: 0 0 95%;
+    color: @secundario;
+
+    p {
+      font-size: 1.8rem;
+      color: #fff;
+    }
+  }
+}
+
+/* foto pc*/
+section {
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  .textsection {
+    color: @primario;
+  }
+}
+
+
+/** footer **/
+.site-footer {
+  padding: 5rem;
+  background-color: #a4b9c4;
+  font-size: 1.6rem;
+
+  h4 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: @secundario;
+    text-align: center;
+  }
+
+  .navegacion-footer {
+    text-align: center;
+
+    a {
+      margin-right: 1rem;
+      color: @secundario;
+    }
+
+    @media @desktop {
+      a {
+        margin-top: 1rem;
+        display: block;
+      }
+    }
+  }
+
+  .redes-sociales {
+    text-align: center;
+    padding-top: 2rem;
+
+    @media @desktop {
+      padding-top: 1rem;
+    }
+
+    a {
+      margin-right: 2rem;
+
+      i {
+        color: #fff;
+        font-size: 3.5rem;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    color: @secundario;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+}
+
+/*Login y Registro*/
+.formulario {
+  form {
+    align-items: center;
+
+    fieldset {
+      border-color: @secundario;
+      padding: 2rem;
+    }
+
+    legend {
+      font-size: 2rem;
+      color: @secundario;
+    }
+
+    label {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    input:not([type="submit"]) {
+      padding: 1rem;
+      display: block;
+      width: 100%;
+      margin-bottom: 2rem;
+      border: none;
+      border-radius: 1rem;
+    }
+
+    input[type=submit] {
+      margin: 0 auto;
+      padding: 1rem;
+      display: block;
+      width: 50%;
+      border-radius: 1rem;
+    }
+
+    input::-webkit-input-placeholder {
+      font-size: 1.4rem;
+      color: @secundario;
+      font-weight: bold;
+    }
+
+    input::-moz-placeholder {
+      color: @secundario;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .login-forget {
+      margin: 2rem;
+      text-align: center;
+    }
+
+    .grid-column {
+      margin: 2rem;
+      font-size: 2rem;
+
+      .linea-horizontal {
+        border-bottom: solid 1px @secundario;
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      span {
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+
+      .login-redes {
+        text-align: center;
+      }
+
+      .grid-fuera {
+        margin-top: 2rem;
+
+        i {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/* Musica*/
+.seccion-archivos {
+  background-color: white;
+  height: 70rem;
+
+  /** Iconos Nosotros **/
+
+  .iconos-nosotros {
+    display: flex;
+    flex-direction: column;
+
+    @media @desktop {
+      justify-content: space-between;
+      flex-direction: row;
+
+    }
+  }
+
+  .icono {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+
+    img {
+      width: 4rem;
+    }
+
+    @media @desktop {
+      flex-basis: calc(25% - 1rem);
+    }
+
+    h3 {
+      color: @primario;
+    }
+  }
+
+}
