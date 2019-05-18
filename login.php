@@ -1,11 +1,20 @@
-<?php
-require_once 'includes/templates/header.inc.php'
-?>
+<!DOCTYPE>
+<head>
+    <title>login</title>
+    <script src="js/dropzone.js"></script>
+    <script src="js/archivos.js"></script>
+    <link rel="stylesheet" href="css/dropzone.css">
+
+
+    <?php
+    require_once 'includes/templates/header.inc.php'
+    ?>
+
 
 
     <section class="contenedor">
         <h2 class="centrar-texto textsection">Inicia Sesión en Transfer</h2>
-        <div class="grid">
+        <div class="grid ">
             <div class="columnas-6">
                 <div class="formulario">
                     <form action="#">

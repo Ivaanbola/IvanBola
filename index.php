@@ -1,6 +1,14 @@
-<?php
-require_once 'includes/templates/header.inc.php'
-?>
+<!DOCTYPE>
+<head>
+    <title>transfer</title>
+    <script src="js/dropzone.js"></script>
+    <script src="js/archivos.js"></script>
+    <link rel="stylesheet" href="css/dropzone.css">
+
+
+    <?php
+    require_once 'includes/templates/header.inc.php'
+    ?>
 
     <section class="contenedor seccion">
         <div class="iconos-nosotros">
@@ -36,7 +44,7 @@ require_once 'includes/templates/header.inc.php'
         <div class="contenedor contenido-contacto">
             <h2>Gestione los archivos de tu dispositivo desde el navegador</h2>
             <p>No esperes más para registrarte y poder disfrutar de la aplicación </p>
-            <a href="registro.jsp" class="boton boton-secundario">Registro</a>
+            <a href="registro.php" class="boton boton-secundario">Registro</a>
         </div>
     </section>
 

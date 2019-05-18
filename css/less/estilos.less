@@ -269,6 +269,7 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
 
       @media @desktop {
         flex-direction: row;
@@ -278,6 +279,7 @@ header {
         font-size: 2.5rem;
         color: @secundario;
         margin-top: 2rem;
+
 
         &:hover {
           color: @primario;
@@ -289,6 +291,18 @@ header {
 
           &:last-of-type {
             margin-right: 0;
+
+            &:after {
+              content: '';
+              width: 2px;
+              background-color: @secundario;
+              height: 50%;
+              position: absolute;
+              transform: skew(-20deg);
+              top: 1.5rem;
+              bottom: 0;
+              right: 9rem;
+            }
           }
         }
       }
@@ -428,6 +442,8 @@ section {
 
 /*Login y Registro*/
 .formulario {
+  margin-bottom: 7rem;
+
   form {
     align-items: center;
 
@@ -455,6 +471,7 @@ section {
       margin-bottom: 2rem;
       border: none;
       border-radius: 1rem;
+      font-size: 1.8rem;
     }
 
     input[type=submit] {
@@ -516,38 +533,23 @@ section {
 /* Musica*/
 .seccion-archivos {
   background-color: white;
-  height: 70rem;
+  min-height: 70rem;
+  padding: 10rem;
+  text-align: center;
 
-  /** Iconos Nosotros **/
 
-  .iconos-nosotros {
-    display: flex;
-    flex-direction: column;
+  form {
+    margin: 0 auto;
 
-    @media @desktop {
-      justify-content: space-between;
-      flex-direction: row;
+    .dz-remove {
+      color: @secundario;
 
     }
+
   }
 
-  .icono {
-    text-align: center;
-    padding: 3rem;
+  .boton {
     margin-top: 4rem;
-    font-size: 1.8rem;
-
-    img {
-      width: 4rem;
-    }
-
-    @media @desktop {
-      flex-basis: calc(25% - 1rem);
-    }
-
-    h3 {
-      color: @primario;
-    }
   }
 
 }

@@ -1,10 +1,9 @@
 <!DOCTYPE>
 <head>
-    <title>fotos</title>
+    <title>files</title>
     <script src="js/dropzone.js"></script>
-    <script src="js/archivos.js"></script>
+    <script src="js/fotos.js"></script>
     <link rel="stylesheet" href="css/dropzone.css">
-
 
     <?php
 require_once 'includes/templates/header.inc.php'
@@ -12,7 +11,7 @@ require_once 'includes/templates/header.inc.php'
 
 
     <section class="contenedor seccion-archivos">
-        <form action="controlador/fotos.php"
+        <form action="controlador/archivos.php"
               class="dropzone contenedor"
               id="my-awesome-dropzone"
               enctype="multipart/form-data" method="POST">
@@ -28,6 +27,7 @@ require_once 'includes/templates/header.inc.php'
     <div id="vista">
 
     </div>
+
 
 <?php
 require_once 'includes/templates/footer.inc.php'
