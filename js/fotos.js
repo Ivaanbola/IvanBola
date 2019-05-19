@@ -22,9 +22,9 @@ function eventListeners() {
 						  // Handle the responseText here. For example, add the text to the preview element:
 						  file.previewTemplate.appendChild(document.createTextNode(responseText));
 						  self.processQueue();
-						  setTimeout(() => {
-								self.removeFile(file);
-						  }, 3500);
+						  // setTimeout(() => {
+							// 	self.removeFile(file);
+						  // }, 3500);
 					 });
 
 				});

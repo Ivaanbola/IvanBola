@@ -11,7 +11,7 @@ require_once 'includes/templates/header.inc.php'
 
 
     <section class="contenedor seccion-archivos">
-        <form action="controlador/archivos.php"
+        <form action="funciones/fotos.php"
               class="dropzone contenedor"
               id="my-awesome-dropzone"
               enctype="multipart/form-data" method="POST">
