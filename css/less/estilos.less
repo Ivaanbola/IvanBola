@@ -65,10 +65,13 @@ a {
   }
 }
 
+.columnas-2 {
+  flex: 0 0 calc(16.6% - 1rem);
+}
+
 .columnas-3 {
   flex: 0 0 calc(25% - 1rem);
 }
-
 
 .columnas-4 {
   flex: 0 0 calc(33.3% - 1rem);
@@ -85,10 +88,8 @@ a {
 }
 
 .grid-fuera {
-
   display: flex;
   justify-content: space-evenly;
-
 }
 
 
@@ -349,7 +350,6 @@ header {
 
 /** Contacto Home **/
 .imagen-contacto {
-  background-image: url(../img/ordenador-movil.jpg);
   background-position: center center;
   background-size: cover;
   height: 40rem;
@@ -537,19 +537,31 @@ section {
   padding: 10rem;
   text-align: center;
 
-
   form {
     margin: 0 auto;
 
     .dz-remove {
       color: @secundario;
-
     }
-
   }
 
   .boton {
     margin-top: 4rem;
   }
+}
 
+//colorBox
+#vista {
+  padding: 2rem;
+
+  .vista-imagen {
+    width: calc(16.6% - 1rem);
+
+    img {
+      padding: 1rem;
+      border-radius: 20px;
+      overflow: hidden;
+      max-height: 15.6rem;
+    }
+  }
 }

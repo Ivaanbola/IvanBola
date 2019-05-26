@@ -18,22 +18,19 @@ class Fotos
         $this->fecha = date('Y-m-d');
     }
 
-    public function creaObj($FILES)
+    public function creaObj($nombre, $tamaño, $tipo, $tmpname)
     {
 
-        $this->setNombre($FILES['name']);
-        $this->setSize($FILES['size']);
-        $this->setType($FILES['type']);
-        $this->setArchivo($FILES['tmp_name']);
-        $this->subirFoto($FILES['tmp_name'], $FILES['name']);
-
+        $this->setNombre($nombre);
+        $this->setSize($tamaño);
+        $this->setType($tipo);
+        $this->setArchivo($tmpname);
     }
 
     /**
      * @return mixed
      */
-    public
-    function getNombre()
+    public function getNombre()
     {
         return $this->nombre;
     }
@@ -131,28 +128,20 @@ class Fotos
 
 
     public
-    function subirFoto($archivo, $nombre)
+    function subirFoto()
     {
-     //   echo "AAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHH";
-    //    echo $archivo;
-     //   echo "AAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHH";
-    //    echo $nombre;
-    //    echo "AAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHH";
 
-
-        $directorio = "../fotosSubidas/";
-
+        $directorio = "../fotosSubidas/";  //2
         if (!is_dir($directorio)) {
-            if (!mkdir($directorio, 0777, true) && !is_dir($directorio)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $directorio));
+            if (!mkdir($directorio, 0755, true) && !is_dir($directorio)) {
+                echo "OOOOOOOOOOOOOOOOOOOO";
             }
         }
+        $carpetaSalida = $directorio . $this->getNombre();  //5
 
-        $carpetaSalida = $directorio . $nombre;  //5
-        if (!move_uploaded_file($archivo, $carpetaSalida)) {
-            echo "<p>No se ha podido crear la carpeta</p>";
+        if (!move_uploaded_file($this->getArchivo(), $carpetaSalida)) {
+            echo "No se ha podido crear";
         }
-
         try {
             $db = new Bd();
             $sql = "INSERT INTO " . $this->tabla . " (nombre, size, type , fecha) VALUES(?,?,?,?)";
