@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4b5ea41-5133-4ddd-b5b3-754c7882618d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/colorbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/images/controls.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/funciones/musica.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/funciones/prueba.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/funciones/videos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/iconodesc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery.colorbox-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/musica.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/videos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/less/estilos.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/estilos.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fotos.php" beforeDir="false" afterPath="$PROJECT_DIR$/fotos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fotosSubidas/Captura.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fotosSubidas/Cv778HGWYAArdCg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/funciones/fotos.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/fotos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/fotos.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fotos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Fotos.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Fotos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepros-6.config" beforeDir="false" afterPath="$PROJECT_DIR$/prepros-6.config" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,13 +24,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/fotos.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="23" column="102" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="102" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -162,10 +146,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -182,7 +165,17 @@
             <path>
               <item name="IvanBola" type="b2602c69:ProjectViewProjectNode" />
               <item name="IvanBola" type="462c0819:PsiDirectoryNode" />
+              <item name="fotosSubidas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IvanBola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IvanBola" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IvanBola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IvanBola" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -192,6 +185,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -262,7 +256,7 @@
       <workItem from="1558295620838" duration="5657000" />
       <workItem from="1558462591003" duration="686000" />
       <workItem from="1558463344826" duration="5842000" />
-      <workItem from="1558869000745" duration="8910000" />
+      <workItem from="1558869000745" duration="9601000" />
     </task>
     <task id="LOCAL-00001" summary="cambiando clss">
       <created>1558213991278</created>
@@ -271,11 +265,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558213991278</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="js">
+      <created>1558888254390</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558888254390</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64310000" />
+    <option name="totallyTimeSpent" value="65001000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -288,7 +289,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978166" visible="true" weight="0.19731544" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -317,7 +317,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cambiando clss" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiando clss" />
+    <MESSAGE value="js" />
+    <option name="LAST_COMMIT_MESSAGE" value="js" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/blog.php">
@@ -522,9 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/IvanBola/js/fotos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -607,6 +605,9 @@
           <caret line="23" column="102" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="102" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

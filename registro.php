@@ -1,9 +1,9 @@
 <!DOCTYPE>
 <head>
     <title>register</title>
-    <script src="js/dropzone.js"></script>
+    <script src="../../../Users/ivaan/Downloads/IvanBola/js/dropzone.js"></script>
     <script src="js/archivos.js"></script>
-    <link rel="stylesheet" href="css/dropzone.css">
+    <link rel="stylesheet" href="../../../Users/ivaan/Downloads/IvanBola/css/dropzone.css">
 
 
     <?php
@@ -30,6 +30,10 @@
                     <form action="#">
                         <fieldset>
                             <legend>Iniciar Sesion</legend>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" placeholder="Nombre">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos" placeholder="Apellidos">
                             <label for="email">E-mail:</label>
                             <input type="text" id="email" placeholder="E-Mail">
                             <label for="contrasena">Contraseña:</label>

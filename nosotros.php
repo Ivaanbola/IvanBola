@@ -1,9 +1,9 @@
 <!DOCTYPE>
 <head>
     <title>about us</title>
-    <script src="js/dropzone.js"></script>
+    <script src="../../../Users/ivaan/Downloads/IvanBola/js/dropzone.js"></script>
     <script src="js/archivos.js"></script>
-    <link rel="stylesheet" href="css/dropzone.css">
+    <link rel="stylesheet" href="../../../Users/ivaan/Downloads/IvanBola/css/dropzone.css">
 
 
     <?php
@@ -13,27 +13,27 @@
     <section class="contenedor seccion">
         <div class="iconos-nosotros">
             <div class="icono">
-                <img src="img/iconomus.svg" alt="Icono musica">
+                <img src="../../../Users/ivaan/Downloads/IvanBola/img/iconomus.svg" alt="Icono musica">
                 <h3>Música</h3>
                 <p>Lista todas tus canciones o pasalas del ordenador a tu dispositivo movil de manera sencilla
                 </p>
             </div>
 
             <div class="icono">
-                <img src="img/iconovid.svg" alt="Icono videos">
+                <img src="../../../Users/ivaan/Downloads/IvanBola/img/iconovid.svg" alt="Icono videos">
                 <h3>Videos</h3>
                 <p>Visualiza todos tus videos en el ordenador, descargatelos o pasa nuevos videos a tu movil o tablet
                 </p>
             </div>
 
             <div class="icono">
-                <img src="img/iconofot.svg" alt="Icono fotos">
+                <img src="../../../Users/ivaan/Downloads/IvanBola/img/iconofot.svg" alt="Icono fotos">
                 <h3>Fotos</h3>
                 <p>Navega por tu galeria de fotos o pasate nuevas fotos rapidamente.</p>
             </div>
 
             <div class="icono">
-                <img src="img/iconodoc.svg" alt="Icono documentos">
+                <img src="../../../Users/ivaan/Downloads/IvanBola/img/iconodoc.svg" alt="Icono documentos">
                 <h3>Documentos</h3>
                 <p>Podras llevar el control de todos tus documentos facilmente</p>
             </div>
@@ -52,7 +52,7 @@
         <h2 class="centrar-texto textsection">Transferencia sin cables</h2>
         <div class="grid">
             <div class="columnas-6">
-                <img src="img/apple-iphone-smartphone-desk.png" alt="Imagen ordenador movil y tablet">
+                <img src="../../../Users/ivaan/Downloads/IvanBola/img/apple-iphone-smartphone-desk.png" alt="Imagen ordenador movil y tablet">
             </div>
             <div class="columnas-6">
                 <p>Nulla vehicula finibus magna. Quisque tincidunt velit id lectus facilisis, a hendrerit urna iaculis.
