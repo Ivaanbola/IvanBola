@@ -1,10 +1,6 @@
 <!DOCTYPE>
 <head>
     <title>register</title>
-    <script src="../../../Users/ivaan/Downloads/IvanBola/js/dropzone.js"></script>
-    <script src="js/archivos.js"></script>
-    <link rel="stylesheet" href="../../../Users/ivaan/Downloads/IvanBola/css/dropzone.css">
-
 
     <?php
     require_once 'includes/templates/header.inc.php'
@@ -30,35 +26,49 @@
                     <form action="#">
                         <fieldset>
                             <legend>Iniciar Sesion</legend>
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" placeholder="Nombre">
-                            <label for="apellidos">Apellidos</label>
-                            <input type="text" id="apellidos" placeholder="Apellidos">
-                            <label for="email">E-mail:</label>
-                            <input type="text" id="email" placeholder="E-Mail">
-                            <label for="contrasena">Contraseña:</label>
-                            <input type="password" id="password" placeholder="Contraseña">
-                            <label for="contrasena">Confirmar contraseña:</label>
-                            <input type="password" id="password" placeholder="Confirmar contraseña">
-                            <div>
-                                <input type="submit" value="Enviar" class="boton boton-primario">
-                                <div class="login-forget">
-                                    <a href="registro.php" class="enlace-primario">Iniciar Sesion</a>
+                            <div class="grid">
+                                <div class="columnas-6">
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" id="nombre" placeholder="Nombre">
+                                </div>
+                                <div class="columnas-6">
+                                    <label for="apellidos">Apellidos</label>
+                                    <input type="text" id="apellidos" placeholder="Apellidos">
                                 </div>
                             </div>
+                            <div class="grid">
+                                <div class="columnas-6">
+                                    <label for="usuario">Usuario:</label>
+                                    <input type="text" id="usuario" placeholder="Usuario">
+                                </div>
+                                <div class="columnas-6">
+                                    <label for="email">E-mail:</label>
+                                    <input type="text" id="email" placeholder="E-Mail">
+                                </div>
+                            </div>
+                                <label for="contrasena">Contraseña:</label>
+                                <input type="password" id="password" placeholder="Contraseña">
+                                <label for="contrasena">Confirmar contraseña:</label>
+                                <input type="password" id="password" placeholder="Confirmar contraseña">
+                                <div>
+                                    <input type="submit" value="Registrarte" class="boton boton-primario">
+                                    <div class="login-forget">
+                                        <a href="registro.php" class="enlace-primario">Iniciar Sesion</a>
+                                    </div>
+                                </div>
 
-                            <div class="grid-column login-redes">
-                                <div class="linea-horizontal"></div>
-                                <span class="enlace-primario ">o regístrate con</span>
-                                <div class="grid-fuera">
-                                    <a href="https://www.google.com" class="enlace-primario" target="blank"><i
-                                                class="fab fa-google"></i>Google</a>
-                                    <a href="https://www.twitter.com" class="enlace-primario" target="blank"><i
-                                                class="fab fa-twitter"></i>Twitter</a>
-                                    <a href="https://www.facebook.com" class="enlace-primario" target="blank"><i
-                                                class="fab fa-facebook"></i>Facebook</a>
+                                <div class="grid-column login-redes">
+                                    <div class="linea-horizontal"></div>
+                                    <span class="enlace-primario ">o regístrate con</span>
+                                    <div class="grid-fuera">
+                                        <a href="https://www.google.com" class="enlace-primario" target="blank"><i
+                                                    class="fab fa-google"></i>Google</a>
+                                        <a href="https://www.twitter.com" class="enlace-primario" target="blank"><i
+                                                    class="fab fa-twitter"></i>Twitter</a>
+                                        <a href="https://www.facebook.com" class="enlace-primario" target="blank"><i
+                                                    class="fab fa-facebook"></i>Facebook</a>
+                                    </div>
                                 </div>
-                            </div>
 
                         </fieldset>
 

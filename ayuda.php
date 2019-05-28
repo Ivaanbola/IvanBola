@@ -1,14 +1,11 @@
 <!DOCTYPE>
 <head>
     <title>transfer help</title>
-    <script src="js/dropzone.js"></script>
-    <script src="js/archivos.js"></script>
-    <link rel="stylesheet" href="css/dropzone.css">
 
 
     <?php
-require_once 'includes/templates/header.inc.php'
-?>
+    require_once 'includes/templates/header.inc.php'
+    ?>
 
 
     <section class="contenedor seccion">

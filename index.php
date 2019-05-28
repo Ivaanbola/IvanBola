@@ -1,9 +1,6 @@
 <!DOCTYPE>
 <head>
     <title>transfer</title>
-    <script src="js/dropzone.js"></script>
-    <script src="js/archivos.js"></script>
-    <link rel="stylesheet" href="css/dropzone.css">
 
 
     <?php

@@ -1,16 +1,9 @@
 <!DOCTYPE>
 <head>
     <title>login</title>
-    <script src="../../../Users/ivaan/Downloads/IvanBola/js/dropzone.js"></script>
-    <script src="js/archivos.js"></script>
-    <link rel="stylesheet" href="../../../Users/ivaan/Downloads/IvanBola/css/dropzone.css">
-
-
     <?php
     require_once 'includes/templates/header.inc.php'
     ?>
-
-
 
     <section class="contenedor">
         <h2 class="centrar-texto textsection">Inicia Sesión en Transfer</h2>
@@ -20,12 +13,12 @@
                     <form action="#">
                         <fieldset>
                             <legend>Iniciar Sesion</legend>
-                            <label for="email">E-mail:</label>
-                            <input type="text" id="email" placeholder="E-Mail">
+                            <label for="email">Correo electronico o Usuario:</label>
+                            <input type="text" id="email" placeholder="E-Mail o Usuario">
                             <label for="contrasena">Contraseña:</label>
                             <input type="password" id="password" placeholder="Contraseña">
                             <div>
-                                <input type="submit" value="Enviar" class="boton boton-primario">
+                                <input type="submit" value="Entrar" class="boton boton-primario">
                             </div>
                             <div class="login-forget">
                                 <a href="registro.php" class="enlace-primario">¿Olvidaste tu contraseña?</a>
