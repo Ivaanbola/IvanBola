@@ -152,54 +152,60 @@ class Usuario
             $_SESSION['id'] = $stmt;
             if ($stmt == 0) {
                 echo "<p>Ha ocurrido un error en la inyeccion</p>";
+            } else {
+                echo "<script>lanzaAlerta('success','Bienvenido','');
+            setTimeout(function() {
+               location.href = 'fotos.php'
+            },2500);
+            </script>";
             }
         } else {
             echo "<script>lanzaAlerta('error','Usuario y/o email','Ya hay un usuario o un email con este nombre');
-        setTimeout(function() {
-           location.href = 'registro.php'
-        },2500);
-</script>";
+            setTimeout(function() {
+               location.href = 'registro.php'
+            },2500);
+            </script>";
 
         }
 
     }
 
 
-    public function login()
+    public function login($usuario, $password)
     {
-
-        $db = new Bd();
-        //Codigo para loguear a los administradores
-
-        $sql = "SELECT usuario, password, id  FROM usuarios WHERE usuario = ?";
-        $stmt = $db->getConexion()->prepare($sql);
-        $stmt->bind_param('s', $usuario);
+        $sql = "SELECT usuario, email, password, nombre, apellidos, id  FROM usuarios WHERE usuario = ? OR email = ?";
+        $stmt = $this->db->getConexion()->prepare($sql);
+        $stmt->bind_param('ss', $usuario, $usuario);
         $stmt->execute();
-        $stmt->bind_result($usuarioUsuario, $passwordUsuario, $idUsuario);
+        $stmt->bind_result($usuarioUsuario, $emailUsuario, $passwordUsuario, $nombreUsuario, $apellidoUsuario, $idUsuario);
         $stmt->fetch();
 
         if ($usuarioUsuario) {
             if (password_verify($password, $passwordUsuario)) {
                 session_start();
-                $_SESSION['nombre'] = $usuarioUsuario;
-                $respuesta = Array(
-                    'respuesta' => 'correcto',
-                    'nombre' => $usuarioUsuario,
-                    'accion' => $accion
-                );
+                $_SESSION['nombre'] = $nombreUsuario;
+                $_SESSION['usuario'] = $usuarioUsuario;
+
+                echo "<script>lanzaAlerta('success','Bienvenido',`Hola de nuevo ${$nombreUsuario}`);
+            setTimeout(function() {
+               location.href = 'fotos.php'
+            },2500);
+            </script>";
             } else {
-                $respuesta = Array(
-                    'error' => 'Password incorrecto'
-                );
+                echo "<script>lanzaAlerta('error','Usuario y/o contraseña','Usuario y/o contraseña incorrectas');
+            setTimeout(function() {
+               location.href = 'login.php'
+            },2500);
+            </script>";
+
             }
         } else {
-            $respuesta = Array(
-                'error' => 'Usuario no encontrado'
-            );
+            echo "<script>lanzaAlerta('error','Error','Introduzca un email o una contraseña correcta');
+            setTimeout(function() {
+               location.href = 'login.php'
+            },2500);
+            </script>";
         }
-        $stmt->close();
-
-        echo json_encode($respuesta);
 
 
     }

@@ -3,7 +3,8 @@
     <script src="js/login.js"></script>
     <title>login</title>
     <?php
-    require_once 'includes/templates/header.inc.php'
+    require_once 'includes/templates/header.inc.php';
+    include_once 'model/Usuario.php';
     ?>
     <?php
     if (isset($_GET['cerrar_sesion'])) {
@@ -12,8 +13,11 @@
             $_SESSION = array();
             session_destroy();
             header('Location: login.php');
-
         }
+    }
+    if (isset($_POST) && !empty($_POST['usuario']) && !empty($_POST['password'])) {
+        $usuario = new Usuario();
+        $usuario->login($_POST['usuario'], $_POST['password']);
     }
     ?>
     <section class="contenedor">
@@ -21,11 +25,11 @@
         <div class="grid ">
             <div class="columnas-6">
                 <div class="formulario">
-                    <form action="#">
+                    <form action="#" id="login" method="post">
                         <fieldset>
                             <legend>Iniciar Sesion</legend>
                             <label for="email">Correo electronico o Usuario:</label>
-                            <input type="text" id="emailusu" placeholder="E-Mail o Usuario">
+                            <input type="text" id="usuario" placeholder="E-Mail o Usuario">
                             <label for="contrasena">Contraseña:</label>
                             <input type="password" id="password" placeholder="Contraseña">
                             <div>
@@ -68,7 +72,9 @@
             </div>
         </div>
     </section>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/login.js"></script>
 <?php
 require_once 'includes/templates/footer.inc.php'
 ?>

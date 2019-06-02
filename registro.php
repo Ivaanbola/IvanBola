@@ -94,7 +94,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/registro.js"></script>
         <?php
         include_once 'model/Usuario.php';
 

@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4b5ea41-5133-4ddd-b5b3-754c7882618d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/sweetalert2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/funciones/zips.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/iconotrash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/registro.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/less/estilos.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/estilos.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fotos.php" beforeDir="false" afterPath="$PROJECT_DIR$/fotos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funciones/fotos.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/fotos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funciones/videos.php" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/videos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/templates/footer.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/templates/footer.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/templates/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/templates/header.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/fotos.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fotos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/videos.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/videos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Bd.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Bd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sesiones.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/sesiones.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepros-6.config" beforeDir="false" afterPath="$PROJECT_DIR$/prepros-6.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registro.php" beforeDir="false" afterPath="$PROJECT_DIR$/registro.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="506">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -55,32 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fotos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-              <folding>
-                <element signature="e#42#90#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/sesiones.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/Usuario.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="145" column="61" selection-start-line="145" selection-start-column="61" selection-end-line="145" selection-end-column="61" />
-              <folding>
-                <element signature="n#limpiaString#0;n#Usuario#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="184">
+              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -88,17 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registro.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="103" column="38" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/templates/footer.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="273">
+              <caret line="100" column="54" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -106,17 +60,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="230">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/less/estilos.less">
+        <entry file="file://$PROJECT_DIR$/model/Usuario.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="70" column="19" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="26" />
+            <state relative-caret-position="519">
+              <caret line="195" column="110" selection-start-line="195" selection-start-column="110" selection-end-line="195" selection-end-column="110" />
+              <folding>
+                <element signature="n#limpiaString#0;n#Usuario#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -196,16 +153,17 @@
         <option value="$PROJECT_DIR$/funciones/fotos.php" />
         <option value="$PROJECT_DIR$/model/sesiones.php" />
         <option value="$PROJECT_DIR$/includes/templates/header.inc.php" />
-        <option value="$PROJECT_DIR$/fotos.php" />
         <option value="$PROJECT_DIR$/js/fotos.js" />
         <option value="$PROJECT_DIR$/js/videos.js" />
         <option value="$PROJECT_DIR$/funciones/videos.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/includes/templates/footer.inc.php" />
         <option value="$PROJECT_DIR$/css/less/estilos.less" />
-        <option value="$PROJECT_DIR$/js/login.js" />
+        <option value="$PROJECT_DIR$/fotos.php" />
         <option value="$PROJECT_DIR$/registro.php" />
+        <option value="$PROJECT_DIR$/js/registro.js" />
         <option value="$PROJECT_DIR$/model/Usuario.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/js/login.js" />
       </list>
     </option>
   </component>
@@ -237,6 +195,11 @@
               <item name="css" type="462c0819:PsiDirectoryNode" />
               <item name="less" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IvanBola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IvanBola" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -256,19 +219,19 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\IvanBola\js" />
+      <recent name="C:\xampp\htdocs\IvanBola\funciones" />
+      <recent name="C:\xampp\htdocs\IvanBola\img" />
+      <recent name="C:\xampp\htdocs\IvanBola\css" />
+      <recent name="C:\xampp\htdocs\IvanBola\includes\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\IvanBola" />
       <recent name="C:\xampp\htdocs\IvanBola\controlador" />
       <recent name="C:\xampp\htdocs\IvanBola\model" />
       <recent name="C:\xampp\htdocs\IvanBola\js" />
       <recent name="C:\xampp\htdocs\IvanBola\vista" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\IvanBola\funciones" />
-      <recent name="C:\xampp\htdocs\IvanBola\img" />
-      <recent name="C:\xampp\htdocs\IvanBola\css" />
-      <recent name="C:\xampp\htdocs\IvanBola\includes\templates" />
-      <recent name="C:\xampp\htdocs\IvanBola" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,7 +287,7 @@
       <workItem from="1559296545889" duration="3000" />
       <workItem from="1559299074255" duration="325000" />
       <workItem from="1559473315002" duration="1972000" />
-      <workItem from="1559490177733" duration="11230000" />
+      <workItem from="1559490177733" duration="13906000" />
     </task>
     <task id="LOCAL-00001" summary="cambiando clss">
       <created>1558213991278</created>
@@ -347,11 +310,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558892046125</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="el delay de registro para ir a fotos">
+      <created>1559503910770</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559503910770</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100108000" />
+    <option name="totallyTimeSpent" value="102784000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -458,12 +428,10 @@
     <MESSAGE value="js" />
     <MESSAGE value="videos fotos" />
     <MESSAGE value="casa" />
-    <option name="LAST_COMMIT_MESSAGE" value="casa" />
+    <MESSAGE value="el delay de registro para ir a fotos" />
+    <option name="LAST_COMMIT_MESSAGE" value="el delay de registro para ir a fotos" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../uptask-inicio/clases/modelo/proyecto.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Ejercicio2/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -664,27 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/less/estilos.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="70" column="19" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/funciones/fotos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -699,13 +646,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fotos.php">
+    <entry file="file://$PROJECT_DIR$/css/less/estilos.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-          <folding>
-            <element signature="e#42#90#0#PHP" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/sesiones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -716,27 +667,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/sesiones.php">
+    <entry file="file://$PROJECT_DIR$/fotos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="184">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/registro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="195" column="110" selection-start-line="195" selection-start-column="110" selection-end-line="195" selection-end-column="110" />
+          <folding>
+            <element signature="n#limpiaString#0;n#Usuario#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="103" column="38" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
+        <state relative-caret-position="273">
+          <caret line="100" column="54" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Usuario.php">
+    <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="145" column="61" selection-start-line="145" selection-start-column="61" selection-end-line="145" selection-end-column="61" />
-          <folding>
-            <element signature="n#limpiaString#0;n#Usuario#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="230">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
