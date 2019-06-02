@@ -1,10 +1,21 @@
 <!DOCTYPE>
 <head>
+    <script src="js/login.js"></script>
     <title>login</title>
     <?php
     require_once 'includes/templates/header.inc.php'
     ?>
+    <?php
+    if (isset($_GET['cerrar_sesion'])) {
+        $cerrar_sesion = $_GET['cerrar_sesion'];
+        if ($cerrar_sesion) {
+            $_SESSION = array();
+            session_destroy();
+            header('Location: login.php');
 
+        }
+    }
+    ?>
     <section class="contenedor">
         <h2 class="centrar-texto textsection">Inicia Sesión en Transfer</h2>
         <div class="grid ">
@@ -14,7 +25,7 @@
                         <fieldset>
                             <legend>Iniciar Sesion</legend>
                             <label for="email">Correo electronico o Usuario:</label>
-                            <input type="text" id="email" placeholder="E-Mail o Usuario">
+                            <input type="text" id="emailusu" placeholder="E-Mail o Usuario">
                             <label for="contrasena">Contraseña:</label>
                             <input type="password" id="password" placeholder="Contraseña">
                             <div>

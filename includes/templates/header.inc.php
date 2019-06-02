@@ -23,7 +23,6 @@
                 <div class="nombre-sitio"><img src="img/logo.png" alt="logo"></div>
                 <p class="slogan"> <span>Transfiera archivos, fotos, documentos y música sin cables. <br>
                         </span>Puedes transferir archivos de forma remota</p>
-
             </div>
         </div>
     </div><!-- contenido-header-->
@@ -43,9 +42,21 @@
                 <a href="musica.php">Musica</a>
                 <a href="videos.php">Videos</a>
                 <a href="fotos.php">Fotos</a>
-                <a href="archivos.php">Documentos</a>
-                <a href="registro.php">Registrate </a>
-                <a href="login.php">Iniciar Sesion</a>
+                <?php
+                if (session_status() !== PHP_SESSION_ACTIVE)
+                    session_start();
+
+                if (isset($_SESSION['usuario']) && !empty($_SESSION['usuario'])) {
+                    ?>
+                    <a href="login.php?cerrar_sesion=1">Cerrar Sesion </a>
+                    <?php
+                } else {
+                    ?>
+                    <a href="registro.php">Registrate </a>
+                    <a href="login.php">Iniciar Sesion</a>
+                    <?php
+                }
+                ?>
             </nav>
         </div>
     </div>

@@ -26,7 +26,6 @@
                 <a href="musica.php">Musica</a>
                 <a href="videos.php">Videos</a>
                 <a href="fotos.php">Fotos</a>
-                <a href="archivos.php">Documentos</a>
                 <a href="registro.php">Registrate </a>
                 <a href="login.php">Inicia Sesion</a>
             </nav>

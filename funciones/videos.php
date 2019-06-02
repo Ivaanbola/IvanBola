@@ -25,7 +25,7 @@ if (!empty($_FILES)) {
     try {
         $db = new Bd();
 
-        $sql = "INSERT INTO musica (nombre, size, type , fecha) VALUES(?,?,?,?)";
+        $sql = "INSERT INTO videos (nombre, size, type , fecha) VALUES(?,?,?,?)";
         $datos = Array($cancion, $tamaño, $tipo,date('Y-m-d'));
         $stmt = $db->queryPrepared($sql, $datos);
 

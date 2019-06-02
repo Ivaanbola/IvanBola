@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ivaan
- * Date: 28/05/2019
- * Time: 21:09
- */
+include_once 'Bd.php';
 
 class Usuario
 {
@@ -14,12 +9,30 @@ class Usuario
     private $email;
     private $password;
     private $password2;
+    private $opciones;
+    private $db;
+    private $tabla;
 
     /**
      * Usuario constructor.
      */
     public function __construct()
     {
+        $this->opciones = array(
+            'cost' => 10
+        );
+        $this->db = new Bd();
+        $this->tabla = "usuarios";
+    }
+
+    public function crearUsuario($nombre, $apellidos, $usuario, $email, $password)
+    {
+        $this->setNombre($nombre);
+        $this->setApellidos($apellidos);
+        $this->setUsuario($usuario);
+        $this->setEmail($email);
+        $this->setPassword($password);
+
     }
 
     /**
@@ -35,7 +48,7 @@ class Usuario
      */
     public function setNombre($nombre)
     {
-        $this->nombre = $nombre;
+        $this->nombre = $this->limpiaString($nombre);
     }
 
     /**
@@ -51,7 +64,7 @@ class Usuario
      */
     public function setApellidos($apellidos)
     {
-        $this->apellidos = $apellidos;
+        $this->apellidos = $this->limpiaString($apellidos);
     }
 
     /**
@@ -75,7 +88,7 @@ class Usuario
      */
     public function setUsuario($usuario)
     {
-        $this->usuario = $usuario;
+        $this->usuario = $this->limpiaString($usuario);
     }
 
     /**
@@ -83,7 +96,7 @@ class Usuario
      */
     public function setEmail($email)
     {
-        $this->email = $email;
+        $this->email = filter_var($email, FILTER_SANITIZE_EMAIL);
     }
 
     /**
@@ -99,23 +112,8 @@ class Usuario
      */
     public function setPassword($password)
     {
-        $this->password = $password;
-    }
+        $this->password = password_hash($password, PASSWORD_BCRYPT, $this->opciones);
 
-    /**
-     * @return mixed
-     */
-    public function getPassword2()
-    {
-        return $this->password2;
-    }
-
-    /**
-     * @param mixed $password2
-     */
-    public function setPassword2($password2)
-    {
-        $this->password2 = $password2;
     }
 
 
@@ -136,6 +134,74 @@ class Usuario
         $archivo = str_replace("ñ", "n", $archivo);
         $archivo = str_replace("Ñ", "N", $archivo);
         return $archivo;
+    }
+
+    public function crearUsuarioBD()
+    {
+        $sql = "SELECT usuario FROM " . $this->tabla . " WHERE usuario = '" . $this->getUsuario() . "'OR email='" . $this->getEmail() . "' LIMIT 1";
+        $stmt = $this->db->numeroElementosConSql($sql);
+        if ($stmt == 0) {
+            $sql = "INSERT INTO " . $this->tabla . " (usuario, email, password, nombre, apellidos) VALUES(?,?,?,?,?)";
+            $datos = Array($this->getUsuario(), $this->getEmail(), $this->getPassword(), $this->getNombre(), $this->getApellidos());
+            $stmt = $this->db->queryPreparedID($sql, $datos);
+            if (session_status() !== PHP_SESSION_ACTIVE) {
+                session_start();
+            }
+            $_SESSION['usuario'] = $this->getUsuario();
+            $_SESSION['nombre'] = $this->getNombre();
+            $_SESSION['id'] = $stmt;
+            if ($stmt == 0) {
+                echo "<p>Ha ocurrido un error en la inyeccion</p>";
+            }
+        } else {
+            echo "<script>lanzaAlerta('error','Usuario y/o email','Ya hay un usuario o un email con este nombre');
+        setTimeout(function() {
+           location.href = 'registro.php'
+        },2500);
+</script>";
+
+        }
+
+    }
+
+
+    public function login()
+    {
+
+        $db = new Bd();
+        //Codigo para loguear a los administradores
+
+        $sql = "SELECT usuario, password, id  FROM usuarios WHERE usuario = ?";
+        $stmt = $db->getConexion()->prepare($sql);
+        $stmt->bind_param('s', $usuario);
+        $stmt->execute();
+        $stmt->bind_result($usuarioUsuario, $passwordUsuario, $idUsuario);
+        $stmt->fetch();
+
+        if ($usuarioUsuario) {
+            if (password_verify($password, $passwordUsuario)) {
+                session_start();
+                $_SESSION['nombre'] = $usuarioUsuario;
+                $respuesta = Array(
+                    'respuesta' => 'correcto',
+                    'nombre' => $usuarioUsuario,
+                    'accion' => $accion
+                );
+            } else {
+                $respuesta = Array(
+                    'error' => 'Password incorrecto'
+                );
+            }
+        } else {
+            $respuesta = Array(
+                'error' => 'Usuario no encontrado'
+            );
+        }
+        $stmt->close();
+
+        echo json_encode($respuesta);
+
+
     }
 
 }

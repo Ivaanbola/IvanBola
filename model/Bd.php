@@ -11,7 +11,6 @@ class Bd
 
     public function __construct()
     {
-
         $this->conexion = new mysqli($this->server, $this->usuario, $this->pass, $this->basedatos);
         //creo que hace lo mismo
         //$this->conexion->select_db($this->basedatos);
@@ -26,17 +25,7 @@ class Bd
     public function consultaSimple($consulta)
     {
         $this->resultado = $this->conexion->query($consulta);
-
         $res = mysqli_fetch_assoc($this->resultado);
-
-        return $res;
-    }
-
-    public function consulta($consulta)
-    {
-        // echo $consulta;
-        $this->resultado = $this->conexion->query($consulta);
-        $res = $this->resultado;
         return $res;
     }
 
@@ -46,16 +35,14 @@ class Bd
         return $res;
     }
 
-    public function numeroElementos()
+    private function numeroElementos()
     {
-
         $num = $this->resultado->num_rows;
         return $num;
     }
 
     public function numeroElementosConSql($sql)
     {
-
         $this->resultado = $this->conexion->query($sql);
         $num = $this->numeroElementos();
         return $num;
@@ -68,24 +55,18 @@ class Bd
 
     public function insertarElemento($tabla, $datos, $foto = 0, $directorio = "")
     {
-
         $claves = array();
         $valores = array();
-
         foreach ($datos as $clave => $valor) {
             $claves[] = $clave;
             $valores[] = "'" . $valor . "'";
         }
-
         if ($foto != 0) {
             $ruta = subirFoto($foto, $directorio);
             $claves[] = "ruta";
             $valores[] = "'" . $ruta . "'";
         }
-
-
         $sql = "INSERT " . $tabla . " (" . implode(',', $claves) . ") VALUES  (" . implode(',', $valores) . ")";
-
         $this->resultado = $this->conexion->query($sql);
         $res = $this->resultado;
         return $res;
@@ -108,6 +89,7 @@ class Bd
         $stmt->execute();
         $result = $stmt->affected_rows;
         $stmt->close();
+
         return $result;
     }
 
@@ -128,7 +110,6 @@ class Bd
         $stmt->execute();
         $result = $stmt->insert_id;
         $stmt->close();
-
         return $result;
     }
 

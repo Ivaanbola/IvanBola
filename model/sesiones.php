@@ -9,8 +9,10 @@ function usuario_autentificado()
 
 function revisar_usuario()
 {
-    return isset($_SESSION['usuario']);
+    if (session_status() !== PHP_SESSION_ACTIVE)
+        session_start();
+    return ($_SESSION['usuario']);
 }
 
-session_start();
+
 usuario_autentificado();

@@ -23,9 +23,11 @@ if (move_uploaded_file($archivo, $carpetaSalida)) {
 if (!empty($_FILES)) {
     try {
         $db = new Bd();
+        session_start();
+        $idUsuario = $_SESSION['id'];
 
-        $sql = "INSERT INTO fotos (nombre, size, type , fecha) VALUES(?,?,?,?)";
-        $datos = [$imagen, $tamaño, $tipo, date('Y-m-d')];
+        $sql = "INSERT INTO fotos (nombre, size, type , fecha, idUsuario) VALUES(?,?,?,?,?)";
+        $datos = [$imagen, $tamaño, $tipo, date('Y-m-d'), $idUsuario];
         $stmt = $db->queryPrepared($sql, $datos);
 
     } catch (Exception $e) {

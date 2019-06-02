@@ -1,64 +1,32 @@
 <?php
-//include_once './model/Fotos.php';
-//include_once 'funciones/funciones.php';
-//$fotos = new Fotos();
-//
-//
-//if (!empty($_FILES)) {
-////    $total_files = count($_FILES);
-//    echo "--------------------";
-////    echo $total_files;
-//    echo "<pre>";
-//    echo var_dump($_FILES);
-//    echo "</pre>";
-////    for ($key = 0; $key < $total_files; $key++) {
-////
-////
-////        $nombre = $_FILES['file']['name'][$key];
-////        $tamaño = $_FILES['file']['size'][$key];
-////        $tipo = $_FILES['file']['type'][$key];
-////        $tmp = $_FILES['file']['tmp_name'][$key];
-////        $fotos->creaObj($nombre, $tamaño, $tipo, $tmp);
-////        $fotos->subirFoto();
-////        print 'File Name: ' . $nombre;
-////        print 'File Type: ' . $tamaño;
-////        print 'File Size: ' . $tipo;
-////        print '-----------------------------';
-//
-//
-////    }
-//    //$fotos = new Fotos();
-//    //  $fotos->creaObj($_FILES);
-//
-//
-//    if ($_FILES['file']) {
-//        $file_ary = reArrayFiles($_FILES['file']);
-//
-//        foreach ($file_ary as $file) {
-//            $nombre = $file['name'];
-//            $tamaño = $file['size'];
-//            $tipo = $file['type'];
-//            $tmp = $file['tmp_name'];
-//            $fotos->creaObj($nombre, $tamaño, $tipo, $tmp);
-//            $fotos->subirFoto();
-//
-//
-//            print 'File Name: ' . $file['name'];
-//            print 'File Type: ' . $file['type'];
-//            print 'File Size: ' . $file['size'];
-//            print '-----------------------------';
-//        }
-//    }
-//
-//}
+include_once 'model/sesiones.php';
 
+//// Creamos un instancia de la clase ZipArchive
+//$zip = new ZipArchive();
+//// Creamos y abrimos un archivo zip temporal
+//$zip->open("img.zip", ZipArchive::CREATE);
+//// Añadimos un archivo en la raid del zip.
+////$zip->addFile("fotosSubidas/".$_POST['registro']['value'] , $_POST['registro']['value']);
+//$zip->addFile("fotosSubidas/descarga (1) - copia.jpg", "imagen.jpg");
+//$zip->addFile("fotosSubidas/descarga.jpg");
+//// Una vez añadido los archivos deseados cerramos el zip.
+//$zip->close();
+//// Creamos las cabezeras que forzaran la descarga del archivo como archivo zip.
+//header("Content-type: application/octet-stream");
+//header("Content-disposition: attachment; filename=img.zip");
+//// leemos el archivo creado
+//readfile('img.zip');
+//// Por último eliminamos el archivo temporal creado
+//unlink('img.zip');//Destruye el archivo temporal
+//
 ?>
     <!DOCTYPE>
     <head>
     <title>fotos</title>
-    <script src="js/dropzone.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.colorbox-min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/fotos.js"></script>
 
     <link rel="stylesheet" href="css/dropzone.css">
@@ -76,16 +44,25 @@
               id="my-awesome-dropzone"
               enctype="multipart/form-data" method="POST">
         </form>
-        <button type="button" class="boton boton-secundario" id="enviar-todo">Subir archivos
-        </button>
-        <button type="button" class="boton boton-secundario" id="limpiar-todo">Limpiar archivos
+        <a class="boton boton-secundario isDisabled" id="enviar-todo">Subir archivos </a>
+        <a class="boton boton-secundario isDisabled" id="limpiar-todo">Limpiar formulario </a>
+        <form method="post" action="funciones/zips.php">
+            <div class="chekboxx">
+                <p>Seleccionar/Deseleccionar todos</p>
+                <input type="checkbox" id="chequear"/>
+            </div>
 
-        </button>
-        <div id="vista">
-            <div class="vista-imagen">
+            <div id="vista">
 
             </div>
-        </div>
+            <input type="hidden" name="accion" value="fotos">
+            <button type="submit" class="boton boton-secundario isDisabled" id="descargar-todo" disabled>Descargar
+                Seleccionadas
+            </button>
+            <a class="boton boton-secundario isDisabled" id="limpiar-selec">Eliminar Seleccionadas</a>
+        </form>
+
+
     </section>
 <?php
 require_once 'includes/templates/footer.inc.php'
