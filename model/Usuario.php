@@ -173,7 +173,7 @@ class Usuario
 
     public function login($usuario, $password)
     {
-        $sql = "SELECT usuario, email, password, nombre, apellidos, id  FROM usuarios WHERE usuario = ? OR email = ?";
+        $sql = "SELECT usuario, email, password, nombre, apellidos, id  FROM " . $this->tabla . " WHERE usuario = ?  OR email = ?";
         $stmt = $this->db->getConexion()->prepare($sql);
         $stmt->bind_param('ss', $usuario, $usuario);
         $stmt->execute();
@@ -194,16 +194,18 @@ class Usuario
             } else {
                 echo "<script>lanzaAlerta('error','Usuario y/o contraseña','Usuario y/o contraseña incorrectas');
             setTimeout(function() {
-               location.href = 'login.php'
+              location.href = 'login.php'
             },2500);
             </script>";
 
             }
         } else {
+
+
             echo "<script>lanzaAlerta('error','Error','Introduzca un email o una contraseña correcta');
             setTimeout(function() {
                location.href = 'login.php'
-            },2500);
+            },1500);
             </script>";
         }
 

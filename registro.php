@@ -9,20 +9,18 @@
     require_once 'includes/templates/header.inc.php'
     ?>
 
-    <section class="contenedor">
+    <section class="contenedor section-foto">
         <h2 class="centrar-texto textsection">Crear una cuenta</h2>
         <div class="grid">
             <div class="columnas-6">
-                <p>Nulla vehicula finibus magna. Quisque tincidunt velit id
-                    lectus facilisis, a hendrerit urna iaculis. Donec posuere felis at
-                    lacus interdum, et feugiat tortor scelerisque. Sed finibus auctor
-                    sapien in ultricies. Nam rutrum non mauris eget fermentum.</p>
-                <p>In cursus, enim quis dictum finibus, nisl enim pulvinar augue,
-                    sagittis eleifend nulla nibh ut justo. Duis magna enim, feugiat eget
-                    tristique at, pulvinar a diam. Mauris augue velit, iaculis ut nibh
-                    non, interdum faucibus libero. Curabitur porttitor placerat elit,
-                    non cursus purus. Sed justo ipsum, aliquam eu maximus vel, elementum
-                    nec leo. Fusce gravida lacus non lacinia auctor.</p>
+                <h4>
+                    Transfiera archivos entre el ordenador y el dispositivo móvil fácilmente </h4>
+                <p>Transfiera fotos,
+                    documentos, URL, etc. entre su ordenador y sus dispositivos, todo sin
+                    cables.</p>
+                <h4>Controle sus dispositivos en cualquier momento</h4> <p>
+                    AirMirror le permite tomar el control completo de su dispositivo Android. El modo de solo lectura y
+                    el teclado remoto llevan su productividad a un nuevo nivel.</p>
             </div>
             <div class="columnas-6">
                 <div class="formulario">
@@ -58,8 +56,10 @@
                                 <input class="form-control" type="password" name="password2" id="password2"
                                        placeholder="Confirmar contraseña">
                                 <span id="resultado-password" class="help-block"></span>
-                                <span id="errorDiv"></span>
+                                <span id="errorDiv1"></span>
                                 <span id="errorDiv2"></span>
+                                <span id="errorDiv3"></span>                                <span id="errorDiv4"></span>
+
 
                             </div>
                             <div>

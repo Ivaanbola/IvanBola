@@ -24,7 +24,14 @@ function eventListeners() {
         }
     })
 
-}
 
+}
+function lanzaAlerta(tipo, titulo, texto) {
+    Swal.fire({
+        type: tipo,
+        title: titulo,
+        text: texto
+    });
+}
 
 

@@ -64,13 +64,13 @@ function validarMail() {
 
 function validar() {
     if (this.value == "") {
-        errorDiv.style.display = "block";
-        errorDiv.innerHTML = "* Este campo es obligatorio";
+        errorDiv3.style.display = "block";
+        errorDiv3.innerHTML = "* Este campo es obligatorio";
         this.style.border = "1px solid red";
         comprobandonom = false;
 
     } else {
-        errorDiv.style.display = "none";
+        errorDiv3.style.display = "none";
         this.style.border = "1px solid #00a65a";
         comprobandonom = true;
     }
@@ -80,13 +80,13 @@ function validar() {
 
 function validar2() {
     if (this.value == "") {
-        errorDiv.style.display = "block";
-        errorDiv.innerHTML = "* Este campo es obligatorio";
+        errorDiv4.style.display = "block";
+        errorDiv4.innerHTML = "* Este campo es obligatorio";
         this.style.border = "1px solid red";
         comprobandousu = false;
 
     } else {
-        errorDiv.style.display = "none";
+        errorDiv4.style.display = "none";
         this.style.border = "1px solid #00a65a";
         comprobandousu = true;
     }
@@ -96,13 +96,13 @@ function validar2() {
 
 function validar3() {
     if (this.value == "") {
-        errorDiv.style.display = "block";
-        errorDiv.innerHTML = "* Este campo es obligatorio";
+        errorDiv1.style.display = "block";
+        errorDiv1.innerHTML = "* Este campo es obligatorio";
         this.style.border = "1px solid red";
         comprobandoape = false;
 
     } else {
-        errorDiv.style.display = "none";
+        errorDiv1.style.display = "none";
         this.style.border = "1px solid #00a65a";
         comprobandoape = true;
     }

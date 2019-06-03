@@ -1,5 +1,8 @@
-<!DOCTYPE>
-<head>
+<?php
+include_once 'model/sesiones.php';
+?>
+    <!DOCTYPE>
+    <head>
     <title>videos</title>
     <script src="js/dropzone.js"></script>
     <script src="js/videos.js"></script>

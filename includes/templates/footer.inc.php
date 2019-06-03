@@ -3,12 +3,9 @@
         <div class="footer-informacion columnas-3">
             <h4>Sobre nosotros </h4>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et blanditiis provident ea? Laborum
-                possimus
-                voluptates dolorem ut, eos atque nobis dignissimos nisi quaerat dicta explicabo perferendis
-                obcaecati,
-                neque,
-                qui enim.
+                Centra su vida multipantalla al permitirle acceder y gestionar su teléfono desde
+                cualquier ordenador, esté donde esté. Con Transfer podrá
+                transferir archivos y controlar totalmente su teléfono desde el ordenador.
             </p>
         </div>
         <div class=" columnas-3">

@@ -45,20 +45,18 @@
         </div>
     </section>
 
-    <section class="contenedor">
+    <section class="contenedor section-foto">
         <h2 class="centrar-texto textsection">Transferencia sin cables</h2>
         <div class="grid">
             <div class="columnas-6">
                 <img src="img/apple-iphone-smartphone-desk.png" alt="Imagen ordenador movil y tablet">
             </div>
             <div class="columnas-6">
-                <p>Nulla vehicula finibus magna. Quisque tincidunt velit id lectus facilisis, a hendrerit urna iaculis.
-                    Donec posuere felis at lacus interdum, et feugiat tortor scelerisque. Sed finibus auctor sapien in
-                    ultricies. Nam rutrum non mauris eget fermentum.</p>
-                <p>In cursus, enim quis dictum finibus, nisl enim pulvinar augue, sagittis eleifend nulla nibh ut justo.
-                    Duis magna enim, feugiat eget tristique at, pulvinar a diam. Mauris augue velit, iaculis ut nibh
-                    non, interdum faucibus libero. Curabitur porttitor placerat elit, non cursus purus. Sed justo ipsum,
-                    aliquam eu maximus vel, elementum nec leo. Fusce gravida lacus non lacinia auctor.</p>
+                <h4 class="">Aplicación web - Gestione archivos en el dispositivo en un navegador web</h4>
+                <p>No se necesita instalar ningún cliente, no hay restricciones para ningún sistema, solo necesita un
+                    navegador web para disfrutar de todas las funciones y para gestionar sus
+                    dispositivos. </p>
+
             </div>
         </div>
     </section>

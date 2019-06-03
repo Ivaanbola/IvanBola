@@ -51,7 +51,9 @@ h3 {
 }
 
 h4 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
+  text-align: center;
+  color: @secundario;
 }
 
 img {
@@ -68,7 +70,7 @@ a {
 
 .form-group.has-success .form-control,
 .form-group.has-success input {
-  border:1px solid #00a65a;
+  border: 1px solid #00a65a;
   box-shadow: none;
 }
 
@@ -356,9 +358,11 @@ header {
 
   .icono {
     text-align: center;
-    padding: 3rem;
     margin-top: 4rem;
     font-size: 1.8rem;
+    @media @desktop {
+      padding: 1.5rem;
+    }
 
     img {
       width: 4rem;
@@ -396,7 +400,23 @@ header {
 }
 
 /* foto pc*/
+.section-foto {
+  .columnas-6 {
+    h4 {
+
+      margin-top: 7rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 7rem;
+    }
+  }
+}
+
 section {
+
 
   p {
     font-size: 1.8rem;

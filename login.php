@@ -1,10 +1,8 @@
 <!DOCTYPE>
 <head>
-    <script src="js/login.js"></script>
     <title>login</title>
     <?php
     require_once 'includes/templates/header.inc.php';
-    include_once 'model/Usuario.php';
     ?>
     <?php
     if (isset($_GET['cerrar_sesion'])) {
@@ -15,12 +13,9 @@
             header('Location: login.php');
         }
     }
-    if (isset($_POST) && !empty($_POST['usuario']) && !empty($_POST['password'])) {
-        $usuario = new Usuario();
-        $usuario->login($_POST['usuario'], $_POST['password']);
-    }
+
     ?>
-    <section class="contenedor">
+    <section class="contenedor section-foto">
         <h2 class="centrar-texto textsection">Inicia Sesión en Transfer</h2>
         <div class="grid ">
             <div class="columnas-6">
@@ -29,9 +24,9 @@
                         <fieldset>
                             <legend>Iniciar Sesion</legend>
                             <label for="email">Correo electronico o Usuario:</label>
-                            <input type="text" id="usuario" placeholder="E-Mail o Usuario">
+                            <input type="text" id="usuario" name="usuario" placeholder="E-Mail o Usuario">
                             <label for="contrasena">Contraseña:</label>
-                            <input type="password" id="password" placeholder="Contraseña">
+                            <input type="password" id="password" name="password" placeholder="Contraseña">
                             <div>
                                 <input type="submit" value="Entrar" class="boton boton-primario">
                             </div>
@@ -59,22 +54,27 @@
                 </div>
             </div>
             <div class="columnas-6">
-                <p>Nulla vehicula finibus magna. Quisque tincidunt velit id
-                    lectus facilisis, a hendrerit urna iaculis. Donec posuere felis at
-                    lacus interdum, et feugiat tortor scelerisque. Sed finibus auctor
-                    sapien in ultricies. Nam rutrum non mauris eget fermentum.</p>
-                <p>In cursus, enim quis dictum finibus, nisl enim pulvinar augue,
-                    sagittis eleifend nulla nibh ut justo. Duis magna enim, feugiat eget
-                    tristique at, pulvinar a diam. Mauris augue velit, iaculis ut nibh
-                    non, interdum faucibus libero. Curabitur porttitor placerat elit,
-                    non cursus purus. Sed justo ipsum, aliquam eu maximus vel, elementum
-                    nec leo. Fusce gravida lacus non lacinia auctor.</p>
+                <h4>
+                    Transfiera archivos entre el ordenador y el dispositivo móvil fácilmente </h4>
+                <p>Transfiera fotos,
+                    documentos, URL, etc. entre su ordenador y sus dispositivos, todo sin
+                    cables.</p>
+                <h4>Controle sus dispositivos en cualquier momento</h4> <p>
+                    AirMirror le permite tomar el control completo de su dispositivo Android. El modo de solo lectura y
+                    el teclado remoto llevan su productividad a un nuevo nivel.</p>
             </div>
         </div>
     </section>
     <script src="js/jquery.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/login.js"></script>
+    <?php
+    include_once 'model/Usuario.php';
+    $usuario = new Usuario();
+    if (isset($_POST) && !empty($_POST['usuario']) && !empty($_POST['password'])) {
+        $usuario->login($_POST['usuario'], $_POST['password']);
+    }
+    ?>
 <?php
 require_once 'includes/templates/footer.inc.php'
 ?>

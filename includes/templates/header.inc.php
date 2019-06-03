@@ -22,7 +22,7 @@
             <div class="informacion-sitio">
                 <div class="nombre-sitio"><img src="img/logo.png" alt="logo"></div>
                 <p class="slogan"> <span>Transfiera archivos, fotos, documentos y música sin cables. <br>
-                        </span>Puedes transferir archivos de forma remota</p>
+                        </span></p>
             </div>
         </div>
     </div><!-- contenido-header-->
