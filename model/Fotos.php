@@ -152,5 +152,45 @@ class Fotos
         }
     }
 
+    public function imprimeTabla()
+    {
+
+        try {
+            $db = new Bd();
+            $sql = "SELECT nombre FROM fotos WHERE idUsuario=" . $_SESSION['id'];
+            $datos = $db->query($sql);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        $texto = "";
+        while ($foto = $datos->fetch_array(MYSQLI_ASSOC)) {
+            $texto .= "<div class='vista-imagen'>
+                <a class='group1 cboxElement' href='fotosSubidas/" . $foto['nombre'] . "'>
+                 <img src='fotosSubidas/" . $foto['nombre'] . "' alt='imagenColorbox'>
+                </a>
+                <div class='iconos grid-fuera'>
+                    <div>
+                        <input type='checkbox' value='" . $foto['nombre'] . "' name='registro[]'>
+                    </div>
+                    <div>
+                        <a href='fotosSubidas/" . $foto['nombre'] . "' download='" . $foto['nombre'] . "'>
+                            <img src='img/iconodesc.svg' class='descarga' id='descargaca'>
+                        </a>
+                    </div>
+                    <div>
+                        <a href='fotosSubidas/" . $foto['nombre'] . "'>
+                          <img src='img/iconotrash.svg' class='descarga' id='basuraca'>
+                        </a>
+                    </div>
+                </div>
+            </div>";
+        }
+
+
+        return $texto;
+
+    }
+
 
 }

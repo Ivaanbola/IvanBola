@@ -57,11 +57,11 @@
                 <h4>
                     Transfiera archivos entre el ordenador y el dispositivo móvil fácilmente </h4>
                 <p>Transfiera fotos,
-                    documentos, URL, etc. entre su ordenador y sus dispositivos, todo sin
+                    documentos, canciones, etc. entre su ordenador y sus dispositivos, todo sin
                     cables.</p>
                 <h4>Controle sus dispositivos en cualquier momento</h4> <p>
-                    AirMirror le permite tomar el control completo de su dispositivo Android. El modo de solo lectura y
-                    el teclado remoto llevan su productividad a un nuevo nivel.</p>
+                    Transfer le permite tomar el control completo de su dispositivo. El modo de traspaso de archivos
+                    llevan su productividad a un nuevo nivel.</p>
             </div>
         </div>
     </section>

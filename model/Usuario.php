@@ -185,6 +185,7 @@ class Usuario
                 session_start();
                 $_SESSION['nombre'] = $nombreUsuario;
                 $_SESSION['usuario'] = $usuarioUsuario;
+                $_SESSION['id'] = $idUsuario;
 
                 echo "<script>lanzaAlerta('success','Bienvenido',`Hola de nuevo ${$nombreUsuario}`);
             setTimeout(function() {

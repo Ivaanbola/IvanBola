@@ -12,10 +12,6 @@ class Bd
     public function __construct()
     {
         $this->conexion = new mysqli($this->server, $this->usuario, $this->pass, $this->basedatos);
-        //creo que hace lo mismo
-        //$this->conexion->select_db($this->basedatos);
-        //creo que hace lo mismo
-        //$this->conexion->query("SET NAMES 'utf8'");
         $this->conexion->set_charset('utf8');
         if ($this->conexion->connect_error) {
             echo $this->conexion->connect_error;

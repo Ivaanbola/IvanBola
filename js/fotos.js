@@ -1,22 +1,25 @@
-
 eventListeners();
 
 function eventListeners() {
-        Dropzone.options.myAwesomeDropzone = {
+    Dropzone.options.myAwesomeDropzone = {
         autoProcessQueue: false,
         addRemoveLinks: true,
         acceptedFiles: ".png,.jpg,.gif,.jpeg",
         dictDefaultMessage: "Arrastra aqui los elementos: </br> Formatos admitidos .png .jpg .jpge .gif",
         dictInvalidFileType: "Este tipo de archivos no estan admitidos",
-        dictCancelUpload:"Cancelar",
+        dictCancelUpload: "Cancelar",
         parallelUploads: 200,
         init:
 
             function () {
+                $(".group1").colorbox({rel: 'group1', maxWidth: "700px", maxHeight: "700px", current: "",});
+
                 var boton = document.querySelector('#enviar-todo');
                 var botonDescarga = document.querySelector('#descargar-todo');
                 var botonSelec = document.querySelector('#limpiar-selec');
                 var botonLimpiar = document.querySelector('#limpiar-todo');
+                var basuraca = document.querySelector('#basuraca');
+                var descargaca = document.querySelector('#descargaca');
                 var self = this;
                 self.options.dictRemoveFile = "Eliminar";
                 boton.addEventListener('click', function () {
@@ -25,13 +28,17 @@ function eventListeners() {
                     });
                 });
                 let chequear = document.querySelector('#chequear');
-
+                chequear.addEventListener('change', function () {
+                    let checkboxes = document.getElementsByName('registro[]');
+                    for (var i = 0; i < checkboxes.length; i++) {
+                        checkboxes[i].checked = this.checked;
+                    }
+                });
                 this.on("addedfile", function (file) {
                     boton.classList.remove('isDisabled');
                     botonLimpiar.classList.remove('isDisabled');
                 });
                 this.on("success", function (file, responseText) {
-                    // Handle the responseText here. For example, add the text to the preview element:
                     //file.previewTemplate.appendChild(document.createTextNode(responseText));
                     boton.className += ' isDisabled';
                     botonLimpiar.className += ' isDisabled';
@@ -53,14 +60,11 @@ function eventListeners() {
                 });
 
                 function parafoto() {
-                    $(".group1").colorbox({rel: 'group1', maxWidth: "900px", maxheight: "90px", current: "",});
+                    $(".group1").colorbox({rel: 'group1', maxWidth: "700px", maxHeight: "700px", current: "",});
                 }
-
-
                 botonLimpiar.addEventListener('click', function () {
                     self.removeAllFiles();
                     boton.className += ' isDisabled';
-                    botonLimpiar.className += ' isDisabled';
                 });
 
 
@@ -77,14 +81,46 @@ function eventListeners() {
                 });
                 botonSelec.addEventListener('click', function () {
                     let checkboxes = document.getElementsByName('registro[]');
-
+                    let miarray = Array();
                     for (var i = checkboxes.length - 1; 0 <= i; i--) {
                         if (checkboxes[i].checked) {
+                            miarray.push(checkboxes[i].value);
                             checkboxes[i].parentElement.parentElement.parentElement.remove();
                         }
                     }
+                    var datos = new FormData();
+                    datos.append('registro[]', miarray);
+                    datos.append('accion', 'eliminar');
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', 'funciones/zips.php', true);
+                    xhr.onload = function () {
+                        if (this.status == 200) {
+                            //var respuesta = JSON.parse(xhr.responseText);
+                            var respuesta = xhr.responseText;
+                            console.log(respuesta);
 
 
+                        }
+                    }
+                    xhr.send(datos);
+                });
+
+                basuraca.addEventListener('click', function () {
+                    var datos = new FormData();
+                    datos.append('registro[]', miarray);
+                    datos.append('accion', 'eliminar');
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', 'funciones/zips.php', true);
+                    xhr.onload = function () {
+                        if (this.status == 200) {
+                            //var respuesta = JSON.parse(xhr.responseText);
+                            var respuesta = xhr.responseText;
+                            console.log(respuesta);
+
+
+                        }
+                    }
+                    xhr.send(datos);
                 });
 
                 function crearElementos(file) {

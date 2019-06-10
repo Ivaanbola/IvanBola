@@ -33,7 +33,13 @@ include_once 'model/sesiones.php';
             </div>
 
             <div id="vista">
+                <?php
+                include_once 'model/Fotos.php';
 
+                $fotos = new Fotos();
+               echo $fotos->imprimeTabla();
+
+                ?>
             </div>
             <input type="hidden" name="accion" value="fotos">
             <button type="submit" class="boton boton-secundario isDisabled" id="descargar-todo" disabled>Descargar

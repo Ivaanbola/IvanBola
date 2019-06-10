@@ -1,4 +1,3 @@
-
     <!DOCTYPE>
     <head>
     <title>register</title>
@@ -16,11 +15,11 @@
                 <h4>
                     Transfiera archivos entre el ordenador y el dispositivo móvil fácilmente </h4>
                 <p>Transfiera fotos,
-                    documentos, URL, etc. entre su ordenador y sus dispositivos, todo sin
+                    documentos, canciones, etc. entre su ordenador y sus dispositivos, todo sin
                     cables.</p>
                 <h4>Controle sus dispositivos en cualquier momento</h4> <p>
-                    AirMirror le permite tomar el control completo de su dispositivo Android. El modo de solo lectura y
-                    el teclado remoto llevan su productividad a un nuevo nivel.</p>
+                    Transfer le permite tomar el control completo de su dispositivo. El modo de traspaso de archivos
+                    llevan su productividad a un nuevo nivel.</p>
             </div>
             <div class="columnas-6">
                 <div class="formulario">
@@ -58,9 +57,8 @@
                                 <span id="resultado-password" class="help-block"></span>
                                 <span id="errorDiv1"></span>
                                 <span id="errorDiv2"></span>
-                                <span id="errorDiv3"></span>                                <span id="errorDiv4"></span>
-
-
+                                <span id="errorDiv3"></span>
+                                <span id="errorDiv4"></span>
                             </div>
                             <div>
                                 <input type="submit" value="Registrarte" class="boton boton-primario isDisabled"
@@ -97,7 +95,6 @@
     <script src="js/registro.js"></script>
         <?php
         include_once 'model/Usuario.php';
-
         if (isset($_POST) && !empty($_POST['usuario'])) {
             $modelo = new Usuario();
             $modelo->crearUsuario($_POST['nombre'], $_POST['apellidos'], $_POST['usuario'], $_POST['email'], $_POST['password']);
