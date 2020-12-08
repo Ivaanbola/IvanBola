@@ -1,10 +1,41 @@
 eventListeners();
+function eliminar(e) {
+    var datos = new FormData();
+    console.log(e.name);
+    datos.append('nombreEliminar', e.name);
+    datos.append('accion', 'eliminaruno');
+    datos.append('tabla', 'fotos');
+    var xhr = new XMLHttpRequest();
+    swal.fire({
+        title: '¿Estas seguro/a?',
+        text: 'No seras capaz de recuperar esto',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.value) {
+            xhr.open('POST', 'funciones/zips.php', true);
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    //var respuesta = JSON.parse(xhr.responseText);
+                    var respuesta = xhr.responseText;
+                    console.log(respuesta);
+                    e.parentElement.parentElement.parentElement.remove();
+                }
+            }
+            xhr.send(datos);
+        }
+    })
 
+}
 function eventListeners() {
     Dropzone.options.myAwesomeDropzone = {
         autoProcessQueue: false,
         addRemoveLinks: true,
-        acceptedFiles: ".png,.jpg,.gif,.jpeg",
+        acceptedFiles: "image/*",
         dictDefaultMessage: "Arrastra aqui los elementos: </br> Formatos admitidos .png .jpg .jpge .gif",
         dictInvalidFileType: "Este tipo de archivos no estan admitidos",
         dictCancelUpload: "Cancelar",
@@ -12,14 +43,16 @@ function eventListeners() {
         init:
 
             function () {
-                $(".group1").colorbox({rel: 'group1', maxWidth: "700px", maxHeight: "700px", current: "",});
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    $(".group1").colorbox({rel: 'group1', maxWidth: "90%", maxHeight: "90%", current: "",});
+                } else
+                    $(".group1").colorbox({rel: 'group1', maxWidth: "700px", maxHeight: "700px", current: "",});
 
                 var boton = document.querySelector('#enviar-todo');
                 var botonDescarga = document.querySelector('#descargar-todo');
                 var botonSelec = document.querySelector('#limpiar-selec');
                 var botonLimpiar = document.querySelector('#limpiar-todo');
                 var basuraca = document.querySelector('#basuraca');
-                var descargaca = document.querySelector('#descargaca');
                 var self = this;
                 self.options.dictRemoveFile = "Eliminar";
                 boton.addEventListener('click', function () {
@@ -62,6 +95,7 @@ function eventListeners() {
                 function parafoto() {
                     $(".group1").colorbox({rel: 'group1', maxWidth: "700px", maxHeight: "700px", current: "",});
                 }
+
                 botonLimpiar.addEventListener('click', function () {
                     self.removeAllFiles();
                     boton.className += ' isDisabled';
@@ -80,56 +114,54 @@ function eventListeners() {
 
                 });
                 botonSelec.addEventListener('click', function () {
-                    let checkboxes = document.getElementsByName('registro[]');
-                    let miarray = Array();
-                    for (var i = checkboxes.length - 1; 0 <= i; i--) {
-                        if (checkboxes[i].checked) {
-                            miarray.push(checkboxes[i].value);
-                            checkboxes[i].parentElement.parentElement.parentElement.remove();
+                    swal.fire({
+                        title: '¿Estas seguro/a?',
+                        text: 'No seras capaz de recuperar esto',
+                        type: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Sí, eliminar',
+                        cancelButtonText: 'Cancelar',
+                    }).then((result) => {
+                        if (result.value) {
+                            let checkboxes = document.getElementsByName('registro[]');
+                            let miarray = Array();
+                            for (var i = checkboxes.length - 1; 0 <= i; i--) {
+                                if (checkboxes[i].checked) {
+                                    miarray.push(checkboxes[i].value);
+                                    checkboxes[i].parentElement.parentElement.parentElement.remove();
+                                }
+                            }
+                            var datos = new FormData();
+                            datos.append('registro[]', miarray);
+                            datos.append('accion', 'eliminar');
+                            datos.append('tabla', 'fotos');
+                            var xhr = new XMLHttpRequest();
+                            xhr.open('POST', 'funciones/zips.php', true);
+                            xhr.onload = function () {
+                                if (this.status == 200) {
+                                    //var respuesta = JSON.parse(xhr.responseText);
+                                    var respuesta = xhr.responseText;
+                                    console.log(respuesta);
+                                }
+                            }
+                            xhr.send(datos);
                         }
-                    }
-                    var datos = new FormData();
-                    datos.append('registro[]', miarray);
-                    datos.append('accion', 'eliminar');
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('POST', 'funciones/zips.php', true);
-                    xhr.onload = function () {
-                        if (this.status == 200) {
-                            //var respuesta = JSON.parse(xhr.responseText);
-                            var respuesta = xhr.responseText;
-                            console.log(respuesta);
+                    })
 
-
-                        }
-                    }
-                    xhr.send(datos);
                 });
 
-                basuraca.addEventListener('click', function () {
-                    var datos = new FormData();
-                    datos.append('registro[]', miarray);
-                    datos.append('accion', 'eliminar');
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('POST', 'funciones/zips.php', true);
-                    xhr.onload = function () {
-                        if (this.status == 200) {
-                            //var respuesta = JSON.parse(xhr.responseText);
-                            var respuesta = xhr.responseText;
-                            console.log(respuesta);
-
-
-                        }
-                    }
-                    xhr.send(datos);
-                });
 
                 function crearElementos(file) {
                     var imagenbasura = document.createElement('img');
                     imagenbasura.setAttribute('src', "img/iconotrash.svg");
                     imagenbasura.setAttribute('class', "descarga");
                     var enlaceBasura = document.createElement('a');
-                    enlaceBasura.setAttribute('href', "fotosSubidas/" + file.name);
                     enlaceBasura.appendChild(imagenbasura);
+                    enlaceBasura.setAttribute('onclick', "eliminar(this)");
+                    enlaceBasura.setAttribute('id', "basuraca");
+                    enlaceBasura.setAttribute('name', file.name);
                     var imagendesc = document.createElement('img');
                     imagendesc.setAttribute('src', "img/iconodesc.svg");
                     imagendesc.setAttribute('class', "descarga");

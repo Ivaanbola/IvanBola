@@ -24,9 +24,10 @@ if (move_uploaded_file($archivo, $carpetaSalida)) {
 if (!empty($_FILES)) {
     try {
         $db = new Bd();
-
-        $sql = "INSERT INTO musica (nombre, size, type , fecha) VALUES(?,?,?,?)";
-        $datos = Array($cancion, $tamaño, $tipo,date('Y-m-d'));
+        session_start();
+        $idUsuario = $_SESSION['id'];
+        $sql = "INSERT INTO musica (nombre, size, type , fecha, idUsuario) VALUES(?,?,?,?,?)";
+        $datos = Array($cancion, $tamaño, $tipo,date('Y-m-d'), $idUsuario);
         $stmt = $db->queryPrepared($sql, $datos);
 
     } catch (Exception $e) {

@@ -11,6 +11,10 @@ html {
   font-size: 62.5%;
 }
 
+a:hover{
+  cursor: pointer;
+}
+
 *,
 *:before,
 *:after {
@@ -56,7 +60,7 @@ h4 {
   color: @secundario;
 }
 
-img {
+img, video {
   max-width: 100%;
 }
 
@@ -617,6 +621,9 @@ section {
       flex: 0 0 calc(16.6% - 1rem);
       flex-wrap: wrap;
       margin-right: 1rem;
+      p{
+        font-size: 1.3rem;
+      }
 
       &:last-of-type {
         margin-right: 0;
@@ -633,8 +640,14 @@ section {
         max-height: 15.6rem;
       }
 
+      video {
+        border-radius: 10px;
+        overflow: hidden;
+        max-height: 15.6rem;
+      }
       .descarga {
         width: 4rem;
+        min-width: 4rem;
       }
 
       div:first-child {

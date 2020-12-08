@@ -23,6 +23,9 @@ include_once 'model/sesiones.php';
               class="dropzone contenedor"
               id="my-awesome-dropzone"
               enctype="multipart/form-data" method="POST">
+            <div class="fallback">
+                <input name="file" type="file"  accept="image/*"  />
+            </div>
         </form>
         <a class="boton boton-secundario isDisabled" id="enviar-todo">Subir archivos </a>
         <a class="boton boton-secundario isDisabled" id="limpiar-todo">Limpiar formulario </a>
@@ -37,19 +40,22 @@ include_once 'model/sesiones.php';
                 include_once 'model/Fotos.php';
 
                 $fotos = new Fotos();
-               echo $fotos->imprimeTabla();
+                echo $fotos->imprimeTabla();
 
                 ?>
             </div>
             <input type="hidden" name="accion" value="fotos">
-            <button type="submit" class="boton boton-secundario isDisabled" id="descargar-todo" disabled>Descargar
+            <button type="submit" class="boton boton-secundario " id="descargar-todo">Descargar
                 Seleccionadas
             </button>
-            <a class="boton boton-secundario isDisabled" id="limpiar-selec">Eliminar Seleccionadas</a>
+            <a class="boton boton-secundario " id="limpiar-selec">Eliminar Seleccionadas</a>
         </form>
 
 
     </section>
+
+    <script src="js/sweetalert2.all.min.js"></script>
+
 <?php
 require_once 'includes/templates/footer.inc.php'
 ?>

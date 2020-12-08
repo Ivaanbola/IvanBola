@@ -134,7 +134,7 @@ class Fotos
         $directorio = "../fotosSubidas/";  //2
         if (!is_dir($directorio)) {
             if (!mkdir($directorio, 0755, true) && !is_dir($directorio)) {
-                echo "OOOOOOOOOOOOOOOOOOOO";
+
             }
         }
         $carpetaSalida = $directorio . $this->getNombre();  //5
@@ -179,8 +179,8 @@ class Fotos
                         </a>
                     </div>
                     <div>
-                        <a href='fotosSubidas/" . $foto['nombre'] . "'>
-                          <img src='img/iconotrash.svg' class='descarga' id='basuraca'>
+                        <a id='basuraca' onclick='eliminar(this)' name='" . $foto['nombre'] . "'>
+                          <img src='img/iconotrash.svg' class='descarga' >
                         </a>
                     </div>
                 </div>

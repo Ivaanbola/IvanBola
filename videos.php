@@ -24,18 +24,38 @@ include_once 'model/sesiones.php';
               class="dropzone contenedor"
               id="my-awesome-dropzone"
               enctype="multipart/form-data" method="POST">
+            <div class="fallback">
+                <input name="file" type="file"  accept="video/*"  />
+            </div>
         </form>
-        <button type="button" class="boton boton-secundario" id="enviar-todo">Subir archivos
-        </button>
-        <button type="button" class="boton boton-secundario" id="limpiar-todo">Limpiar archivos
+        <a class="boton boton-secundario isDisabled" id="enviar-todo">Subir archivos </a>
+        <a class="boton boton-secundario isDisabled" id="limpiar-todo">Limpiar formulario </a>
+        <form method="post" action="funciones/zips.php">
+            <div class="chekboxx">
+                <p>Seleccionar/Deseleccionar todos</p>
+                <input type="checkbox" id="chequear"/>
+            </div>
 
-        </button>
+            <div id="vista">
+                <?php
+                include_once 'model/Videos.php';
+
+                $videos = new Videos();
+                echo $videos->imprimeTabla();
+
+                ?>
+            </div>
+            <input type="hidden" name="accion" value="videos">
+            <button type="submit" class="boton boton-secundario " id="descargar-todo" >Descargar
+                Seleccionadas
+            </button>
+            <a class="boton boton-secundario " id="limpiar-selec">Eliminar Seleccionadas</a>
+        </form>
+
     </section>
 
-    <div id="vista">
 
-    </div>
-
+    <script src="js/sweetalert2.all.min.js"></script>
 
 <?php
 require_once 'includes/templates/footer.inc.php'
